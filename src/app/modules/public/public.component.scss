@@ -1,0 +1,22 @@
+.public {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  &__banner {
+    background-color: antiquewhite;
+    width: 70vw;
+  }
+
+  &__forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 100vh;
+    background-color: #F5F5F5;
+  }
+}

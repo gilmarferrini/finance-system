@@ -1,0 +1,42 @@
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30vw;
+
+  &__form {
+    width: 50%;
+
+    &__field {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.8rem;
+
+      label {
+        margin: 0.2rem 0;
+      }
+
+      input, select {
+        padding: 0.5rem;
+        border-radius: 4px;
+        width: 100%;
+        background-color: rgba($color: #FFFFFF, $alpha: 0.5);
+
+        &::placeholder {
+          color: rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+    }
+
+    button {
+      padding: 0.5rem;
+      margin-top: 2rem;
+      width: 100%;
+      background-color: #1F1D1D;
+      border-radius: 4px;
+      color: #E8E8E8;
+    }
+  }
+
+}

@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PublicRoutingModule } from './public-routing.module';
 import { SignupComponent } from './pages/signup/signup.component';
+import { PublicComponent } from './public.component';
 
 
 @NgModule({
   declarations: [
-    SignupComponent
+    SignupComponent,
+    PublicComponent
   ],
   imports: [
     CommonModule,
