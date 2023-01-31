@@ -41,7 +41,7 @@ describe(SignupService.name, () => {
 
   beforeEach(() => httpTestingController.verify())
 
-  it (`#${SignupService.prototype.signup.name} should return errors if not provided fields`, done => {
+  it(`#${SignupService.prototype.signup.name} should return errors if not provided fields`, done => {
     const userData = {} as Signup
     service.signup(userData).subscribe({
       next: (value) => {
@@ -50,5 +50,23 @@ describe(SignupService.name, () => {
       }
     })
     httpTestingController.expectOne(mockData.api).flush(mockData.data.errors)
+  })
+
+  it(`#${SignupService.prototype.signup.name} should return user on success`, done => {
+    const userData = {
+      firstName: 'FirstName',
+      lastName: 'Lastname',
+      email: 'some_email@email.com',
+      password: '12345678',
+      salary: 2700.41,
+      currency: 'BRL',
+    }
+    service.signup(userData).subscribe({
+      next: (value) => {
+        expect(value).toEqual(mockData.data.success)
+        done()
+      }
+    })
+    httpTestingController.expectOne(mockData.api).flush(mockData.data.success)
   })
 })
